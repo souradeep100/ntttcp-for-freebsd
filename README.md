@@ -1,8 +1,8 @@
-# NTTTCP-for-Linux
+# NTTTCP-for-FreeBSD
 
 ## Summary
 
-A multiple-threaded Linux network throughput benchmark tool.
+A multiple-threaded FreeBSD network throughput benchmark tool.
 
 ## Features
 
@@ -38,8 +38,9 @@ A multiple-threaded Linux network throughput benchmark tool.
 
 
 ## Getting Started
-
-
+##dependancy
+First install libepoll from https://github.com/jiixyj/epoll-shim or by using pkg install.
+This is a wrapper for epoll using kqueue.
 ### Building NTTTCP-for-Linux ###
 
 - Using `make`:
@@ -47,20 +48,14 @@ A multiple-threaded Linux network throughput benchmark tool.
 	make; make install
 ```
 
-- Using `CMake`:
-```
-	cd src
-	mkdir build && cd build
-	cmake ..
-	make && make install
-```
+
 
 ### Usage
 	
 	ntttcp -h
 
 ### Known issues
-
+There are some bugs because of the different proc filesystem between Linux and FreeBSD.
  
 
 ### Example run
